@@ -8,8 +8,8 @@ separate-locales: false
 command: cfw.sh
 
 finish-args:
-- --share=ipc
 - --share=network
+- --share=ipc
 - --socket=x11
 - --device=dri
 - --filesystem=xdg-config/clash:create
@@ -30,9 +30,9 @@ modules:
     sources:
       - type: extra-data
         filename: clash_for_windows.tar.gz
-        url: https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.4/Clash.for.Windows-0.19.4-x64-linux.tar.gz
-        sha256: 204f9be84cf6152fa020dd1a439a484bcef47ee8c7a3f119546e85e13e1aa430
-        size: 156333242
+        url: https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.5/Clash.for.Windows-0.19.5-x64-linux.tar.gz
+        sha256: ea030091be098fcfb4df371ff5fc4f6f3dd8c71d80c6bf6d2266c2083fb40147
+        size: 157528293
         x-checker-data:
           type: anitya
           project-id: 241851
@@ -42,7 +42,7 @@ modules:
       - type: script
         commands:
             - tar xf clash_for_windows.tar.gz
-            - mv "Clash for Windows-0.19.4-x64-linux" clash_for_windows
+            - mv "Clash for Windows-0.19.5-x64-linux" clash_for_windows
             - rm -f clash_for_windows.tar.gz
         dest-filename: apply_extra
 
