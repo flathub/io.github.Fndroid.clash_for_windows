@@ -8,14 +8,14 @@ separate-locales: false
 command: cfw.sh
 
 finish-args:
-- --share=network
-- --share=ipc
-- --socket=x11
-- --device=dri
-- --filesystem=xdg-config/clash:create
-- --talk-name=org.freedesktop.Notifications
-- --talk-name=org.kde.StatusNotifierWatcher
-- --system-talk-name=org.freedesktop.login1
+  - --share=network
+  - --share=ipc
+  - --socket=x11
+  - --device=dri
+  - --filesystem=xdg-config/clash:create
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --system-talk-name=org.freedesktop.login1
 
 modules:
   - name: clash_for_windows
@@ -41,9 +41,9 @@ modules:
 
       - type: script
         commands:
-            - tar xf clash_for_windows.tar.gz
-            - mv "Clash for Windows-0.19.5-x64-linux" clash_for_windows
-            - rm -f clash_for_windows.tar.gz
+          - tar xf clash_for_windows.tar.gz
+          - mv Clash\ for\ Windows-*-x64-linux clash_for_windows
+          - rm -f clash_for_windows.tar.gz
         dest-filename: apply_extra
 
       - type: script
@@ -54,7 +54,7 @@ modules:
 
       - type: file
         path: io.github.Fndroid.clash_for_windows.desktop
-      
+
       - type: file
         path: io.github.Fndroid.clash_for_windows.png
 
