@@ -17,6 +17,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.19.6" date="2022-01-21"/>
     <release version="0.19.5" date="2022-01-07"/>
   </releases>
   <content_rating type="oars-1.1"/>
