@@ -30,9 +30,9 @@ modules:
     sources:
       - type: extra-data
         filename: clash_for_windows.tar.gz
-        url: https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.14/Clash.for.Windows-0.19.14-x64-linux.tar.gz
-        sha256: b0be6a36830ab18ee1545c5e997626736725abf7a1fe46b5c01343c028c6e512
-        size: 97458652
+        url: https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.15/Clash.for.Windows-0.19.15-x64-linux.tar.gz
+        sha256: 4a2446f0bfd1ed43ca318e87df3eba84017c84b8c96ed43533f5d7e2a4df6eae
+        size: 96840789
         x-checker-data:
           type: anitya
           project-id: 241851
