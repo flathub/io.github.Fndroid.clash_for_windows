@@ -5,6 +5,6 @@ Exec=sh -c "cfw.sh %U ; pkill clash-linux"
 Icon=io.github.Fndroid.clash_for_windows
 Encoding=UTF-8
 Terminal=false
-StartupNotify=true
+StartupNotify=false
 Type=Application
 Categories=Network;
