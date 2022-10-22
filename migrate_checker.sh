@@ -17,7 +17,7 @@ WARN3="\n然后重新启动Clash for Windows。"
 
 
 if [ -f $XDG_CONFIG_HOME/new_install_0 ]; then
-    ## 新版正常直接安装，不需要考虑迁移策略
+    ## 没有从旧版升级，不需要考虑迁移策略
     exit 0
 fi
 
@@ -34,11 +34,8 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
             zenity --error --text="$WARN1$WARN3"
         fi
         exit 1 ## 因为cfw.sh有`set -e`，这里返回非0值使其不继续运行CFW主程序
-    else
-        ## 正常状态
-        touch $XDG_CONFIG_HOME/new_install_0 >> /dev/null 2>&1
-        exit 0
     fi
 fi
-
+## 正常状态
 touch $XDG_CONFIG_HOME/new_install_0 >> /dev/null 2>&1
+exit 0
