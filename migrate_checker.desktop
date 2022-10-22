@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=bash /app/bin/migrate_checker.sh
+Name=Migration checker
+Terminal=true
+Type=Application
