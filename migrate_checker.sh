@@ -26,9 +26,7 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
             touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
             zenity --error --text="$WARN1$WARN3"
         fi
-
-        pkill cfw ; pkill clash-linux
-        return 1
+        return 1 //因为cfw.sh有`set -e`，这里返回非0值使其不继续运行CFW主程序
     else
         return 0
     fi
