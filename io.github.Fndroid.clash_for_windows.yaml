@@ -5,7 +5,7 @@ base: org.electronjs.Electron2.BaseApp
 base-version: 21.08
 sdk: org.freedesktop.Sdk
 separate-locales: false
-command: migrate_checker.sh && cfw.sh ; pkill clash-linux
+command: cfw.sh
 
 finish-args:
   - --share=network
@@ -45,12 +45,6 @@ modules:
           - mv Clash\ for\ Windows-*-x64-linux clash_for_windows
           - rm -f clash_for_windows.tar.gz
         dest-filename: apply_extra
-
-      - type: script
-        commands:
-          - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
-          - exec zypak-wrapper /app/extra/clash_for_windows/cfw "$@"
-        dest-filename: cfw.sh
 
       - type: file
         path: io.github.Fndroid.clash_for_windows.desktop
