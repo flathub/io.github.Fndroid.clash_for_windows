@@ -23,8 +23,9 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
         echo
         echo "然后重新启动Clash for Windows"。
         echo
-        read -n 1 -s -r -p "按下任意键关闭此窗口"; echo
-
+        read -n 1 -s -r -p "按下任意键关闭Clash for Windows"; echo
+        pkill cfw
+        pkill clash-linux
     else
         continue
     fi
