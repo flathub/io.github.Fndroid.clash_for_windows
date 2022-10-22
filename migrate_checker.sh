@@ -28,6 +28,7 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
         read -n 1 -s -r -p "按下任意键关闭Clash for Windows"; echo
         pkill cfw
         pkill clash-linux
+        return 1
     else
         continue
     fi
