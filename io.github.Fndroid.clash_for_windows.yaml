@@ -21,12 +21,12 @@ modules:
   - name: clash_for_windows
     buildsystem: simple
     build-commands:
-      - install -Dm755 apply_extra /app/bin/
-      - install -Dm755 cfw.sh /app/bin/
-      - install -Dm755 migrate_checker.sh /app/bin/
-      - install -Dm644 io.github.Fndroid.clash_for_windows.png /app/share/icons/hicolor/256x256/apps/io.github.Fndroid.clash_for_windows.png
-      - install -Dm644 io.github.Fndroid.clash_for_windows.desktop /app/share/applications/io.github.Fndroid.clash_for_windows.desktop
-      - install -Dm644 io.github.Fndroid.clash_for_windows.appdata.xml /app/share/metainfo/io.github.Fndroid.clash_for_windows.appdata.xml
+      - install -Dm755 -t /app/bin apply_extra
+      - install -Dm755 -t /app/bin cfw.sh
+      - install -Dm755 -t /app/bin migrate_checker.sh
+      - install -Dm644 -t /app/share/icons/hicolor/256x256/apps io.github.Fndroid.clash_for_windows.png
+      - install -Dm644 -t /app/share/applications io.github.Fndroid.clash_for_windows.desktop
+      - install -Dm644 -t /app/share/metainfo io.github.Fndroid.clash_for_windows.appdata.xml
 
     sources:
       - type: extra-data
