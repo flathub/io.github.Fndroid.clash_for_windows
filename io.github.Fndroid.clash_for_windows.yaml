@@ -18,22 +18,15 @@ finish-args:
   - --system-talk-name=org.freedesktop.login1
 
 modules:
-  - name: xterm
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://invisible-island.net/archives/xterm/xterm-374.tgz
-        sha256: 11d4d626670d4d6d7b69fb7467e9ec231817e5ad22502f9167768fd88ac1bdf5
-
   - name: clash_for_windows
     buildsystem: simple
     build-commands:
-      - install -Dm755 apply_extra /app/bin/
-      - install -Dm755 cfw.sh /app/bin/
-      - install -Dm755 migrate_checker.sh /app/bin/
-      - install -Dm644 io.github.Fndroid.clash_for_windows.png /app/share/icons/hicolor/256x256/apps/io.github.Fndroid.clash_for_windows.png
-      - install -Dm644 io.github.Fndroid.clash_for_windows.desktop /app/share/applications/io.github.Fndroid.clash_for_windows.desktop
-      - install -Dm644 io.github.Fndroid.clash_for_windows.appdata.xml /app/share/metainfo/io.github.Fndroid.clash_for_windows.appdata.xml
+      - install -Dm755 -t /app/bin apply_extra
+      - install -Dm755 -t /app/bin cfw.sh
+      - install -Dm755 -t /app/bin migrate_checker.sh
+      - install -Dm644 -t /app/share/icons/hicolor/256x256/apps io.github.Fndroid.clash_for_windows.png
+      - install -Dm644 -t /app/share/applications io.github.Fndroid.clash_for_windows.desktop
+      - install -Dm644 -t /app/share/metainfo io.github.Fndroid.clash_for_windows.appdata.xml
 
     sources:
       - type: extra-data
