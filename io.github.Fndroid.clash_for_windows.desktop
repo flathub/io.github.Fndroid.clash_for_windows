@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Clash for Windows
 Comment=A Windows/macOS/Linux GUI based on Clash and Electron.
-Exec=sh -c "cfw.sh %U ; pkill clash-linux"
+Exec=sh -c "gtk-launch /app/share/applications/migrate_checker.desktop ; cfw.sh %U ; pkill clash-linux"
 Icon=io.github.Fndroid.clash_for_windows
 Encoding=UTF-8
 Terminal=false
