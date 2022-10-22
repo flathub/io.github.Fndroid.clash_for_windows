@@ -41,3 +41,4 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
     fi
 fi
 
+touch $XDG_CONFIG_HOME/new_install_0 >> /dev/null 2>&1
