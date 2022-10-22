@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-gtk-launch migrate_checker.sh || 0
+gtk-launch /app/bin/migrate_checker.sh || true
 export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
-exec zypak-wrapper /app/extra/clash_for_windows/cfw "$@" || 0
+zypak-wrapper /app/extra/clash_for_windows/cfw "$@" || true
 pkill clash-linux
