@@ -57,6 +57,9 @@ modules:
         
       - type: file
         path: migrate_checker.sh
+
+      - type: file
+        path: cfw.sh
         
       - type: file
         path: migrate_checker.desktop
