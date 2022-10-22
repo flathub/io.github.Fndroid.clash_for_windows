@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# /app/bin/migrate_checker.sh
 
 if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
     # CFW已经运行过
