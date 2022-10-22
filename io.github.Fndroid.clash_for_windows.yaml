@@ -22,8 +22,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-      url: https://invisible-island.net/archives/xterm/xterm-374.tgz
-      sha256: 11d4d626670d4d6d7b69fb7467e9ec231817e5ad22502f9167768fd88ac1bdf5
+        url: https://invisible-island.net/archives/xterm/xterm-374.tgz
+        sha256: 11d4d626670d4d6d7b69fb7467e9ec231817e5ad22502f9167768fd88ac1bdf5
 
   - name: clash_for_windows
     buildsystem: simple
