@@ -31,7 +31,7 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
         pkill clash-linux
         return 1
     else
-        continue
+        return 0
     fi
 fi
 
