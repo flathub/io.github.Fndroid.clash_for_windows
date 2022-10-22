@@ -24,7 +24,7 @@ fi
 if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
     # CFW已经运行过
     if [ -z "$(ls -A ~/.config/clash)" ]; then
-        ## $XDG_CONFIG_HOME/clash 目录为空，说明未迁移数据
+        ## ~/.config/clash 目录为空，说明未迁移数据
 
         if [ -f $XDG_CONFIG_HOME/error_migrate ]; then
             ## 已经弹出过一次对话框，则追加说明
