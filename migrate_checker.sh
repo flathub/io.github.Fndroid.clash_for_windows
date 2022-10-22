@@ -24,7 +24,7 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
             touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
         fi
         echo
-        echo "然后重新启动Clash for Windows"。
+        echo "然后重新启动Clash for Windows。"
         echo
         read -n 1 -s -r -p "按下任意键关闭Clash for Windows"; echo
         pkill cfw
