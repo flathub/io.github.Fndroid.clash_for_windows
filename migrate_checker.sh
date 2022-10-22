@@ -12,7 +12,6 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
         echo "mkdir -p ~/.var/app/io.github.Fndroid.clash_for_windows/.config && \\"
         echo "rmdir ~/.var/app/io.github.Fndroid.clash_for_windows/config/clash && \\"
         echo "mv -t ~/.var/app/io.github.Fndroid.clash_for_windows/.config ~/.config/clash"
-        touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
         if [ -f $XDG_CONFIG_HOME/error_migrate ]; then
             echo
             echo "如果你已经执行了上述命令并且重启了Clash for Windows但不起效，请执行以下命令："
@@ -21,6 +20,8 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
             echo "rm -rf ~/.var/app/io.github.Fndroid.clash_for_windows && \\"
             echo "mkdir -p ~/.var/app/io.github.Fndroid.clash_for_windows/.config && \\"
             echo "mv -t ~/.var/app/io.github.Fndroid.clash_for_windows/.config ~/.config/clash"
+        else
+            touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
         fi
         echo
         echo "然后重新启动Clash for Windows"。
