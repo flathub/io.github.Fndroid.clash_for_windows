@@ -21,12 +21,13 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
         ## $XDG_CONFIG_HOME/clash 目录为空，说明未迁移数据
 
         if [ -f $XDG_CONFIG_HOME/error_migrate ]; then
+            ## 已经弹出过一次对话框，则追加说明
             zenity --error --text="$WARN1$WARN2$WARN3"
         else
             touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
             zenity --error --text="$WARN1$WARN3"
         fi
-        return 1 //因为cfw.sh有`set -e`，这里返回非0值使其不继续运行CFW主程序
+        return 1 ## 因为cfw.sh有`set -e`，这里返回非0值使其不继续运行CFW主程序
     else
         return 0
     fi
