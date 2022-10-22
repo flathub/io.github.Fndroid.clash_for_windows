@@ -5,14 +5,14 @@ base: org.electronjs.Electron2.BaseApp
 base-version: 21.08
 sdk: org.freedesktop.Sdk
 separate-locales: false
-command: cfw.sh
+command: migrate_checker.sh && cfw.sh ; pkill clash-linux
 
 finish-args:
   - --share=network
   - --share=ipc
   - --socket=x11
   - --device=dri
-  - --filesystem=xdg-config/clash:create
+  - --persist=.config/clash
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
   - --system-talk-name=org.freedesktop.login1
@@ -60,3 +60,9 @@ modules:
 
       - type: file
         path: io.github.Fndroid.clash_for_windows.appdata.xml
+        
+      - type: file
+        path: migrate_checker.sh
+        
+      - type: file
+        path: migrate_checker.desktop
