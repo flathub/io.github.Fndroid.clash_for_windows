@@ -26,7 +26,7 @@ modules:
       - install -Dm755 migrate_checker.sh /app/bin/
       - install -Dm644 io.github.Fndroid.clash_for_windows.png /app/share/icons/hicolor/256x256/apps/io.github.Fndroid.clash_for_windows.png
       - install -Dm644 io.github.Fndroid.clash_for_windows.desktop /app/share/applications/io.github.Fndroid.clash_for_windows.desktop
-      - install -Dm644 migrate_checker.desktop /app/extra/migrate_checker.desktop
+      - install -Dm644 io.github.Fndroid.clash_for_windows-migrate_checker.desktop.desktop /app/share/applications/io.github.Fndroid.clash_for_windows-migrate_checker.desktop.desktop
       - install -Dm644 io.github.Fndroid.clash_for_windows.appdata.xml /app/share/metainfo/io.github.Fndroid.clash_for_windows.appdata.xml
 
     sources:
@@ -64,4 +64,4 @@ modules:
         path: cfw.sh
         
       - type: file
-        path: migrate_checker.desktop
+        path: io.github.Fndroid.clash_for_windows-migrate_checker.desktop.desktop
