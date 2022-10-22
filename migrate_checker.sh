@@ -6,7 +6,6 @@ WARN1="Flathub对宿主机文件系统访问权限做出了限制，现在Clash 
 请在终端执行以下命令以将配置文件移动到Clash for Windows可以访问的位置：\n\
 \n\
 mkdir -p ~/.var/app/io.github.Fndroid.clash_for_windows/.config &amp;&amp; \\\\\n\
-rmdir ~/.var/app/io.github.Fndroid.clash_for_windows/config/clash &amp;&amp; \\\\\n\
 mv -t ~/.var/app/io.github.Fndroid.clash_for_windows/.config ~/.config/clash\n"
 WARN2="\n如果你已经执行了上述命令并且重启了Clash for Windows但不起效，请执行以下命令：\n\n\
 mv -t ~/.config ~/.var/app/io.github.Fndroid.clash_for_windows/.config/clash &amp;&amp; \\\\\n\
@@ -26,16 +25,17 @@ if [[ -d $XDG_CONFIG_HOME/clash_win ]]; then
     if [ -z "$(ls -A ~/.config/clash)" ]; then
         ## ~/.config/clash 目录为空，说明未迁移数据
 
-        if [ -f $XDG_CONFIG_HOME/error_migrate ]; then
+        if [ -f $XDG_CONFIG_HOME/error_migrate_0 ]; then
             ## 已经弹出过一次对话框，则追加说明
             zenity --error --text="$WARN1$WARN2$WARN3"
         else
-            touch $XDG_CONFIG_HOME/error_migrate >> /dev/null 2>&1
+            touch $XDG_CONFIG_HOME/error_migrate_0 >> /dev/null 2>&1
             zenity --error --text="$WARN1$WARN3"
         fi
         exit 1 ## 因为cfw.sh有`set -e`，这里返回非0值使其不继续运行CFW主程序
     fi
 fi
 ## 正常状态
+rm -f $XDG_CONFIG_HOME/error_migrate_0
 touch $XDG_CONFIG_HOME/new_install_0 >> /dev/null 2>&1
 exit 0
