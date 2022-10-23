@@ -8,5 +8,4 @@ Due to the limitations of flatpak, some features are not available for now. Such
 
 - Service Mode
 - TUN Mode
-- Start with Linux
 - ...
