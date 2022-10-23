@@ -10,6 +10,8 @@
   <url type="homepage">https://github.com/Fndroid/clash_for_windows_pkg</url>
   <description>
     <p>Clash is a rules-based, cross-platform proxy application core program written in Go. Clash for Windows is a graphical Clash branch available on Linux. The Clash API is used to configure and control the Clash core application for easy visualization and use by users.</p>
+    <p>Known issues:</p>
+    <p>Due to the well-established restrictions of sandbox, some features are not available for now. Such as Service Mode, TUN Mode...</p>
   </description>
   <screenshots>
     <screenshot type="default">
