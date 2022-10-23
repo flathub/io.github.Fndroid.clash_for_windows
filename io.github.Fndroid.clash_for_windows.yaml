@@ -12,7 +12,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --device=dri
-  - --persist=xdg-config/clash
+  - --persist=~/.config/clash
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
   - --system-talk-name=org.freedesktop.login1
