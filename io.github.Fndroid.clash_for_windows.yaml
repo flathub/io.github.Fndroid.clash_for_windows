@@ -21,11 +21,12 @@ modules:
   - name: clash_for_windows
     buildsystem: simple
     build-commands:
-      - install -Dm755 apply_extra /app/bin/
-      - install -Dm755 cfw.sh /app/bin/
-      - install -Dm644 io.github.Fndroid.clash_for_windows.png /app/share/icons/hicolor/256x256/apps/io.github.Fndroid.clash_for_windows.png
-      - install -Dm644 io.github.Fndroid.clash_for_windows.desktop /app/share/applications/io.github.Fndroid.clash_for_windows.desktop
-      - install -Dm644 io.github.Fndroid.clash_for_windows.appdata.xml /app/share/metainfo/io.github.Fndroid.clash_for_windows.appdata.xml
+      - install -Dm755 -t /app/bin apply_extra
+      - install -Dm755 -t /app/bin cfw.sh
+      - install -Dm755 -t /app/bin migrate_checker.sh
+      - install -Dm644 -t /app/share/icons/hicolor/256x256/apps io.github.Fndroid.clash_for_windows.png
+      - install -Dm644 -t /app/share/applications io.github.Fndroid.clash_for_windows.desktop
+      - install -Dm644 -t /app/share/metainfo io.github.Fndroid.clash_for_windows.appdata.xml
 
     sources:
       - type: extra-data
@@ -46,12 +47,6 @@ modules:
           - rm -f clash_for_windows.tar.gz
         dest-filename: apply_extra
 
-      - type: script
-        commands:
-          - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
-          - exec zypak-wrapper /app/extra/clash_for_windows/cfw "$@"
-        dest-filename: cfw.sh
-
       - type: file
         path: io.github.Fndroid.clash_for_windows.desktop
 
@@ -60,3 +55,9 @@ modules:
 
       - type: file
         path: io.github.Fndroid.clash_for_windows.appdata.xml
+        
+      - type: file
+        path: migrate_checker.sh
+
+      - type: file
+        path: cfw.sh
