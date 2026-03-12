@@ -1,3 +1,4 @@
 {
-  "only-arches": ["x86_64"]
+  "only-arches": ["x86_64"],
+  "end-of-life": "This application is no longer maintained, and the associated repository appears to have been deleted by the developers."
 }
